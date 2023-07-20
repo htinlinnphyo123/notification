@@ -1,7 +1,8 @@
 <?php
 
-use App\Http\Controllers\SendNotification;
+use Carbon\Carbon;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\SendNotification;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,6 +16,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
+    dd(Carbon::now()->addMinute(1));
     return view('welcome');
 });
 
